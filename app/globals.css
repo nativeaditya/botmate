@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 100% 8%;
+    --foreground: 0 0% 100%;
+    --card: 270 100% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 270 100% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 271 100% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 100% 82%;
+    --secondary-foreground: 270 100% 12%;
+    --muted: 270 10% 85%;
+    --muted-foreground: 0 0% 85%;
+    --accent: 293 100% 62%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 60% 30%;
+    --input: 270 60% 30%;
+    --ring: 271 100% 57%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 270 100% 8%;
+    --foreground: 0 0% 100%;
+    --card: 270 100% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 270 100% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 271 100% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 100% 82%;
+    --secondary-foreground: 270 100% 12%;
+    --muted: 270 10% 85%;
+    --muted-foreground: 0 0% 85%;
+    --accent: 293 100% 62%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 60% 30%;
+    --input: 270 60% 30%;
+    --ring: 271 100% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(to bottom, #0c001c, #1a0033);
+  }
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 0.6rem;
+  padding: 1px;
+  background: linear-gradient(45deg, #9f2fff, #6b00c7, #f13fff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, rgba(159, 47, 255, 0.1), rgba(107, 0, 199, 0.1));
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #9f2fff, #f13fff, #6b00c7);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, rgba(12, 0, 28, 0.8), rgba(26, 0, 51, 0.8));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(159, 47, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gradient-card:hover {
+  border-color: rgba(159, 47, 255, 0.3);
+  box-shadow: 0 0 20px rgba(159, 47, 255, 0.2);
+}
+
+.gradient-button {
+  background: linear-gradient(45deg, #9f2fff, #f13fff);
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(45deg, #8a28e0, #e038e0);
+  box-shadow: 0 0 15px rgba(159, 47, 255, 0.4);
+}
+
+.gradient-icon-bg {
+  background: linear-gradient(135deg, rgba(159, 47, 255, 0.2), rgba(241, 63, 255, 0.2));
+}
+
+.hero-bg {
+  background: radial-gradient(
+    circle at center,
+    rgba(240, 200, 255, 0.1),
+    rgba(203, 170, 255, 0.05),
+    rgba(157, 140, 255, 0.02)
+  );
+}
+
+.nebula-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(240, 200, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(203, 170, 255, 0.1), transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(157, 140, 255, 0.05), transparent 60%);
+  filter: blur(40px);
+  z-index: 0;
+}
