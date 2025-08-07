@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Bot, MessageSquare, Phone } from "lucide-react"
+import Image from "next/image"
+
 
 export function Footer() {
   return (
@@ -8,8 +10,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 font-bold text-xl mb-4">
-              <Bot className="h-6 w-6 text-accent" />
-              <span className="gradient-text">BotMate</span>
+            <Image src="/logo.png" alt="BotMate Logo" width={120} height={120} />
+
             </div>
             <p className="text-muted-foreground">Empowering businesses with AI-driven solutions.</p>
           </div>
@@ -54,8 +56,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <a href="tel:+91 6367727023" className="text-muted-foreground hover:text-primary">
-                  +91 636-772-7023
+                <a href="tel:+91 9772121002" className="text-muted-foreground hover:text-primary">
+                  +91 9772-1210-02
                 </a>
               </li>
             </ul>

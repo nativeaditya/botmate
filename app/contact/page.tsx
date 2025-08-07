@@ -206,9 +206,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-lg font-semibold mb-2">Call Us</h3>
                         <p className="text-muted-foreground mb-1">Main Office:</p>
-                        <a href="tel:+916367727023" className="text-primary hover:underline">
-                          +91 636-772-7023
-                        </a>
+                        <a href="tel:+91 9772121002" className="text-muted-foreground hover:text-primary">
+                  +91 9772-1210-02
+                </a>
                         
                       </div>
                     </div>

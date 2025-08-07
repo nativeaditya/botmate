@@ -4,7 +4,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import { Bot, Layers } from "lucide-react"
+import { Layers } from "lucide-react"
+import Image from "next/image"
 
 export function Header() {
   const pathname = usePathname()
@@ -18,8 +19,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/50 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 font-bold text-xl">
-          <Bot className="h-6 w-6 text-accent" />
-          <span className="gradient-text">BotMate</span>
+          <Image src="/logo.png" alt="BotMate Logo" width={120} height={120} />
+          
         </div>
         <nav className="hidden md:flex items-center gap-6">
           <Link

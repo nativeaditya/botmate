@@ -175,7 +175,7 @@ export default function ServicesPage() {
 
             <div className="relative">
               {/* Process steps with connecting line */}
-              <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-primary via-purple-500 to-blue-400 transform -translate-x-1/2"></div>
+              <div className=""></div>
 
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                 <div className="flex flex-col items-center text-center relative z-10">
