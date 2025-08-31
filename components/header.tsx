@@ -42,6 +42,12 @@ export function Header() {
             Industries
           </Link>
           <Link
+            href="/portfolio"
+            className={`text-sm font-medium transition-colors ${pathname === "/industries" ? "text-accent" : "hover:text-primary"}`}
+          >
+            Portfolio
+          </Link>
+          <Link
             href="/about"
             className={`text-sm font-medium transition-colors ${pathname === "/about" ? "text-accent" : "hover:text-primary"}`}
           >
@@ -91,6 +97,13 @@ export function Header() {
               onClick={toggleMobileMenu}
             >
               Industries
+            </Link>
+            <Link
+              href="/portfolio"
+              className={`block text-lg font-medium transition-colors ${pathname === "/industries" ? "text-accent" : "hover:text-primary"}`}
+              onClick={toggleMobileMenu}
+            >
+              Portfolio
             </Link>
             <Link
               href="/about"
